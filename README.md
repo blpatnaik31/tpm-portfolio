@@ -1,5 +1,32 @@
 # TPM / Program Delivery Portfolio — Lokapati "Loki" Patnaik
 
+## Visual portfolio
+
+This repository now includes a dependency-free static portfolio at [`index.html`](index.html). It turns the Markdown case studies, delivery artifacts, and skills matrix below into a responsive, accessible site with hash-based routing.
+
+### Run locally
+
+From the repository root, start any static file server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000>.
+
+The site is intentionally dependency-light so it can be hosted on GitHub Pages, Netlify, Vercel static hosting, or any standard web server without a build step.
+
+### Publish
+
+The simplest option is GitHub Pages:
+
+1. Push the repository to GitHub.
+2. Open **Settings → Pages**.
+3. Choose **Deploy from a branch**, select `main`, and choose `/ (root)`.
+4. Add a custom domain later if desired.
+
+Before publishing, review [`PLACEHOLDERS.md`](PLACEHOLDERS.md), especially the public-readiness notes for the Alcon case study, and remove any content that has not been cleared for public use.
+
 Senior Product Manager / Technical Program Manager, 13+ years across healthcare IT, medical devices, and enterprise program delivery. PMP · CSPO · CSM · MBA (University of San Diego).
 
 This repo is a public, sanitized distillation of a private Career Workbook I keep on my own delivery history. It's built to answer one question for a hiring manager: **what does this person actually do when they own a program end to end?** Four case studies, each pulled from real engagements, structured the same way — problem, stakeholders, approach, artifacts I produced, and quantified outcome. Alongside them are the reusable delivery templates I bring to every engagement and a cross-career skills matrix.
