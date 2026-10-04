@@ -1,16 +1,25 @@
-# Pushing this repo to GitHub
+# Publishing this portfolio
 
-The `blpatnaik31/tpm-portfolio` repo already exists on GitHub (created, empty) — but this folder itself is **not yet a git repo**: the content was copied here from the cloud build without its git history (the file-transfer tool won't write into a `.git` folder). You need to initialize git fresh here before pushing. From inside this folder, run:
+The repository includes a dependency-free static site. It can be previewed locally without installing packages:
 
 ```bash
-git init
-git add .
-git commit -m "Initial TPM portfolio: case studies, artifacts, skills matrix"
-git branch -M main
-git remote add origin https://github.com/blpatnaik31/tpm-portfolio.git
-git push -u origin main
+python3 -m http.server 8000
 ```
 
-Then pin the repo from your GitHub profile (Customize your pins → select it).
+Open <http://localhost:8000> to view the portfolio.
 
-Delete this file once you've pushed, or keep it — it's harmless either way.
+## GitHub Pages
+
+1. Push the repository to `blpatnaik31/tpm-portfolio`.
+2. Open **Settings → Pages** on GitHub.
+3. Choose **Deploy from a branch**, select `main`, and choose `/ (root)`.
+4. Share the generated Pages URL or configure a custom domain.
+
+Because the site is served from the repository root and uses hash-based routes, it works on GitHub Pages without a rewrite configuration.
+
+## Before publishing
+
+- Review [`PLACEHOLDERS.md`](PLACEHOLDERS.md), especially the Alcon case-study notes.
+- Confirm that company names, engagement details, and metrics are cleared for public use.
+- Remove or generalize any content that could identify confidential systems, people, or data.
+- Test the published URL on mobile and desktop.
