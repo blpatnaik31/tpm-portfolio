@@ -1,4 +1,4 @@
-# TPM / Program Delivery Portfolio — Lokapati "Loki" Patnaik
+# TPM / Program Delivery Portfolio — Lokapati Bhogela
 
 **Live site: [blpatnaik31.github.io/tpm](https://blpatnaik31.github.io/tpm/)** · Companion: [FDE portfolio](https://blpatnaik31.github.io/fde/) · [All portfolios](https://blpatnaik31.github.io/)
 
