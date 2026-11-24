@@ -1,5 +1,7 @@
 # TPM / Program Delivery Portfolio — Lokapati "Loki" Patnaik
 
+**Live site: [blpatnaik31.github.io/tpm](https://blpatnaik31.github.io/tpm/)** · Companion: [FDE portfolio](https://blpatnaik31.github.io/fde/) · [All portfolios](https://blpatnaik31.github.io/)
+
 ## Visual portfolio
 
 This repository now includes a dependency-free static portfolio at [`index.html`](index.html). It turns the Markdown case studies, delivery artifacts, and skills matrix below into a responsive, accessible site with hash-based routing.
@@ -18,12 +20,7 @@ The site is intentionally dependency-light so it can be hosted on GitHub Pages, 
 
 ### Publish
 
-The simplest option is GitHub Pages:
-
-1. Push the repository to GitHub.
-2. Open **Settings → Pages**.
-3. Choose **Deploy from a branch**, select `main`, and choose `/ (root)`.
-4. Add a custom domain later if desired.
+The site is published at <https://blpatnaik31.github.io/tpm/>. A sync workflow in [`blpatnaik31.github.io`](https://github.com/blpatnaik31/blpatnaik31.github.io) copies `index.html`, `app.js`, and `styles.css` from this repo's `main` branch to `/tpm/` there, so a change merged here goes live automatically (hourly, or right away if the `PAGES_SYNC_TOKEN` secret is set; see `.github/workflows/notify-pages.yml`).
 
 Before publishing, review [`PLACEHOLDERS.md`](PLACEHOLDERS.md), especially the public-readiness notes for the Alcon case study, and remove any content that has not been cleared for public use.
 
