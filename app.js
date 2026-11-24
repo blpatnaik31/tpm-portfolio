@@ -116,6 +116,41 @@ const caseStudies = [
     scopeNote: "This engagement is presented on confirmed scope and architectural ownership. Before/after metrics for latency, data quality, incidents, adoption, and deployment reliability were not formally tracked during the tenure, so no percentages are estimated.",
     why: "The combination of surgical device data, EHR interoperability, IAM/security architecture, and edge deployment in one role is a rare mix for medtech and digital-health employers.",
   },
+  {
+    slug: "ai-catalog-platform-delivery",
+    number: "05",
+    company: "AI-driven catalog platform",
+    role: "Product Owner / Solution Architect",
+    period: "Jun 2026 – present",
+    scope: "AI-platform pod · cross-pod program work",
+    title: "A delivery operating model for a new AI-platform pod",
+    summary: "Discovery, a 16-sprint weekly cadence, gated decisions, a telemetry-grounded backlog and a human-approved path to production for a newly formed pod on a commerce/marketplace SaaS platform.",
+    headline: "16 sprints · 2 pods",
+    tags: ["AI platform", "Agile delivery", "Decision governance", "Program operations"],
+    filters: ["AI platform"],
+    problem: "A newly formed backend AI-platform pod had to deliver on an AI-driven catalog engine without a shared understanding of the runtime pipeline, a delivery cadence, a backlog tied to production signal, or a way to settle contested technical decisions. Across the engagement, milestone completion was disputed in leadership reporting, a new frontend pod depended on a few experts, and marketplace onboarding needed category-mapping validation before enablement work could be built.",
+    stakeholders: "Engineering (the AI-platform pod, later the frontend pod), engineering leads for gated decisions, leadership for sprint-goal and milestone reporting, cross-pod program stakeholders, and marketplace onboarding teams.",
+    approach: [
+      "Turned architecture deep-dives into about 15 referenced Phase-0 discovery artifacts, including a verified pipeline reference and a pod-split analysis.",
+      "Ran a weekly plan → status → retro cadence for 16 consecutive sprints, with Done-When goals and honest committed-vs-completed reporting.",
+      "Ran a lead-gated decision register and wrote 3 decision records on contested AI-validation trade-offs.",
+      "Grounded backlog sizing in live production telemetry and broke an umbrella epic into 10 ready-to-build stories.",
+      "Produced 8+ category-mapping validation packets covering hundreds of SKUs, and refined about 19 enablement stories to Definition of Ready.",
+      "Built a reproducible milestone-attribution method that resolved a disputed delivery date in leadership reporting.",
+      "Stood up a second, frontend pod with an ownership roadmap, an expert-dependence risk log and a capacity plan.",
+      "Designed a two-pass operating model separating automated fix verification from human-approved production re-drive.",
+    ],
+    artifacts: ["Discovery and onboarding pack", "16 sprints of plans, status and retros", "Decision register and records", "Telemetry-grounded backlog", "Category-mapping validation packets", "Milestone attribution analyses", "Pod ownership roadmap and risk log", "19+ reusable workflow tools"],
+    outcomes: [
+      ["16", "sprints planned and reported on a weekly cadence"],
+      ["~15", "discovery artifacts orienting a new pod"],
+      ["10", "ready-to-build stories from one umbrella epic"],
+      ["8+", "validation packets covering hundreds of SKUs"],
+    ],
+    scopeNote: "The engagement is ongoing, and before/after measures such as cycle time or predictability weren't baselined when the work started. Counts are from documented work; no percentages are estimated.",
+    visual: "ai-operating-model",
+    why: "Program management on an AI platform where many decisions are contested by default: what counts as fixed, which metric to trust, and when automation can touch production. The common thread is making things checkable: verified references, telemetry instead of estimates, a decision register, a reproducible attribution method, and a human gate where automation meets production. The architecture behind the repair model is in the companion <a href=\"https://blpatnaik31.github.io/arch/\">architecture portfolio</a>.",
+  },
 ];
 
 const artifacts = [
@@ -185,7 +220,7 @@ function tagList(tags) {
 function caseCard(item) {
   return `<a class="work-card" href="#/work/${item.slug}" data-case-card data-tags="${item.filters.join("|")}">
     <div class="card-top">
-      <span class="card-index">${item.number} / 04</span>
+      <span class="card-index">${item.number} / ${String(caseStudies.length).padStart(2, "0")}</span>
       <h3>${item.title}</h3>
       <span class="card-company">${item.company} · ${item.role}</span>
     </div>
@@ -217,7 +252,7 @@ function renderHome() {
   </div></section>
   <section class="section"><div class="container">${metrics()}</div></section>
   <section class="section"><div class="container">
-    <div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>Proof of ownership, not just participation.</h2></div><p>Four engagements across post-M&A integration, regulated migration, cloud modernization, and healthcare interoperability.</p></div>
+    <div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>Proof of ownership, not just participation.</h2></div><p>Five engagements across post-M&A integration, regulated migration, cloud modernization, healthcare interoperability, and AI-platform delivery.</p></div>
     <div class="work-grid">${caseStudies.map(caseCard).join("")}</div>
     <div class="button-row"><a class="button" href="#/work">View all case studies <span aria-hidden="true">→</span></a></div>
   </div></section>
@@ -238,8 +273,8 @@ function renderHome() {
 }
 
 function renderWork() {
-  main.innerHTML = `<section class="page-hero"><div class="container"><span class="eyebrow">Selected work</span><h1>Programs with real constraints and measurable stakes.</h1><p class="lede">A portfolio of delivery ownership across regulated healthcare, medtech interoperability, ERP transformation, and global rollout.</p></div></section>
-  <section class="section"><div class="container"><div class="filter-row" aria-label="Filter case studies"><button class="filter-button" type="button" aria-pressed="true" data-filter="All">All work</button>${["Regulated delivery", "Interoperability", "Cloud / AWS", "ERP / JDE"].map((filter) => `<button class="filter-button" type="button" aria-pressed="false" data-filter="${filter}">${filter}</button>`).join("")}</div><div class="work-grid">${caseStudies.map(caseCard).join("")}</div></div></section>`;
+  main.innerHTML = `<section class="page-hero"><div class="container"><span class="eyebrow">Selected work</span><h1>Programs with real constraints and measurable stakes.</h1><p class="lede">A portfolio of delivery ownership across regulated healthcare, medtech interoperability, ERP transformation, global rollout, and AI-platform delivery.</p></div></section>
+  <section class="section"><div class="container"><div class="filter-row" aria-label="Filter case studies"><button class="filter-button" type="button" aria-pressed="true" data-filter="All">All work</button>${["Regulated delivery", "Interoperability", "Cloud / AWS", "ERP / JDE", "AI platform"].map((filter) => `<button class="filter-button" type="button" aria-pressed="false" data-filter="${filter}">${filter}</button>`).join("")}</div><div class="work-grid">${caseStudies.map(caseCard).join("")}</div></div></section>`;
   document.querySelectorAll("[data-filter]").forEach((button) => button.addEventListener("click", () => {
     const filter = button.dataset.filter;
     document.querySelectorAll("[data-filter]").forEach((item) => item.setAttribute("aria-pressed", item === button ? "true" : "false"));
@@ -255,6 +290,7 @@ function renderArtifacts() {
 }
 
 function visualFor(item) {
+  if (item.visual === "ai-operating-model") return `<figure class="visual-panel"><div class="flow"><span class="flow-node">Discover</span><span class="flow-arrow">→</span><span class="flow-node accent">Plan · Status · Retro</span><span class="flow-arrow">→</span><span class="flow-node">Gated decisions</span></div><div class="flow" style="margin-top:0.7rem"><span class="flow-node">Telemetry backlog</span><span class="flow-arrow">→</span><span class="flow-node">Automated verify</span><span class="flow-arrow">→</span><span class="flow-node accent">Human-approved release</span></div><figcaption>One weekly operating rhythm, with checkable inputs (telemetry, verified references) and a human gate where automation meets production.</figcaption></figure>`;
   if (item.visual === "gold-coast-flow") return `<figure class="visual-panel"><div class="flow"><span class="flow-node">Legacy portal</span><span class="flow-arrow">→</span><span class="flow-node accent">API + ETL</span><span class="flow-arrow">→</span><span class="flow-node">JDE</span><span class="flow-arrow">→</span><span class="flow-node">Finance · Claims · Reports</span></div><figcaption>Data mapping and validation were treated as a continuous flow, not a single cutover event.</figcaption></figure>`;
   if (item.visual === "cloud-modernization") return `<figure class="visual-panel"><div class="timeline"><div class="timeline-row"><span>Hold system</span><div class="timeline-bar wide"></div></div><div class="timeline-row"><span>Recall flow</span><div class="timeline-bar warm"></div></div><div class="timeline-row"><span>Data layer</span><div class="timeline-bar"></div></div><div class="timeline-row"><span>Adoption</span><div class="timeline-bar wide"></div></div></div><figcaption>Four connected workstreams: cloud migration, recall automation, data consolidation, and global change management.</figcaption></figure>`;
   if (item.visual === "alcon-routes") return `<figure class="visual-panel"><div class="route-grid"><div class="route-cell"><strong>NextGen</strong>Patient · Appt · PDF</div><div class="route-cell"><strong>ModMed</strong>Patient · Appt · PDF</div><div class="route-cell"><strong>Nextech</strong>Patient · Appt · PDF</div></div><div class="flow" style="margin-top:1rem"><span class="flow-node accent">Rhapsody</span><span class="flow-arrow">→</span><span class="flow-node">Clinic Connect</span><span class="flow-arrow">+</span><span class="flow-node">Smart Solutions</span></div><figcaption>Three EHR sources × three data types = nine routes, supported by reusable IAM and fault-tolerance patterns.</figcaption></figure>`;

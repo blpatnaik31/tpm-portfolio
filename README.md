@@ -26,9 +26,9 @@ Before publishing, review [`PLACEHOLDERS.md`](PLACEHOLDERS.md), especially the p
 
 Senior Product Manager / Technical Program Manager, 13+ years across healthcare IT, medical devices, and enterprise program delivery. PMP · CSPO · CSM · MBA (University of San Diego).
 
-This repo is a public, sanitized distillation of a private Career Workbook I keep on my own delivery history. It's built to answer one question for a hiring manager: **what does this person actually do when they own a program end to end?** Four case studies, each pulled from real engagements, structured the same way — problem, stakeholders, approach, artifacts I produced, and quantified outcome. Alongside them are the reusable delivery templates I bring to every engagement and a cross-career skills matrix.
+This repo is a public, sanitized distillation of a private Career Workbook I keep on my own delivery history. It's built to answer one question for a hiring manager: **what does this person actually do when they own a program end to end?** Five case studies, each pulled from real engagements, structured the same way — problem, stakeholders, approach, artifacts I produced, and quantified outcome. Alongside them are the reusable delivery templates I bring to every engagement and a cross-career skills matrix.
 
-Numbers below are as documented in my own engagement records. Where an outcome wasn't formally tracked at the time, I say so rather than estimate it after the fact — case study 4 is presented on confirmed scope alone for exactly that reason (see the note at the top of that file).
+Numbers below are as documented in my own engagement records. Where an outcome wasn't formally tracked at the time, I say so rather than estimate it after the fact — case studies 4 and 5 are presented on confirmed scope alone for exactly that reason (see the note at the top of each file).
 
 ## Case studies
 
@@ -38,6 +38,7 @@ Numbers below are as documented in my own engagement records. Where an outcome w
 | 2 | [Gold Coast Health Plan — TPM](case-studies/02-gold-coast-health-plan.md) | Medi-Cal legacy portal migration under live DHCS/CMS compliance constraints | 98% data accuracy, zero cutover disruption |
 | 3 | [Baxter International — TPM](case-studies/03-baxter-tpm-cloud-modernization.md) | Legacy-to-cloud modernization of FDA-regulated hold/recall systems | 100% supply chain visibility, 75% fewer manual reconciliations |
 | 4 | [Alcon — Senior Product Manager](case-studies/04-alcon-healthcare-interoperability.md) | Multi-EHR FHIR integration, surgical data platform, IAM/API gateway, edge device lifecycle | 3 EHRs / 9 routes / 6-stage surgical flow (outcomes not formally tracked — scope-driven case study) |
+| 5 | [AI-driven catalog platform — Product Owner / Solution Architect](case-studies/05-ai-catalog-platform-delivery.md) | Delivery operating model for a new AI-platform pod: discovery, 16-sprint cadence, gated decisions, telemetry-grounded backlog, human-approved release path | 16 sprints / ~15 discovery artifacts / 10-story epic breakdown / 2 pods (engagement ongoing — scope-driven case study) |
 
 ## Reusable delivery artifacts
 
